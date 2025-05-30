@@ -10,4 +10,4 @@ window.addEventListener("keyup", event => {
 });
 
 /// onerror_thing.js
-window.addEventListener("error", event => {alert(event);});
+window.addEventListener("error", event => {alert(event.toString());});
