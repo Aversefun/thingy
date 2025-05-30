@@ -10,4 +10,16 @@ window.addEventListener("keyup", event => {
 });
 
 /// onerror_thing.js
-window.addEventListener("error", event => {alert(event.toString());});
+window.addEventListener("error", event => {
+  let name = event.name;
+  name = name === undefined ? "Error" : `${name}`;
+  let msg = event.message;
+  msg = msg === undefined ? "" : `${msg}`;
+  if (name === "") {
+    return msg;
+  }
+  if (msg === "") {
+    return name;
+  }
+  return `${name}: ${msg}`;
+});
